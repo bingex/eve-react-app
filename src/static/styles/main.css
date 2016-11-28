@@ -1,24 +1,55 @@
-.App {
-    text-align: center;
+body{
+    /*background: url("../img/bg.jpg");*/
 }
-
-.App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
 }
-
-.App-header {
-    background-color: #222;
-    height: 150px;
-    padding: 20px;
+.container {
+    padding: 0;
+    margin: 2px;
+    width: 100%;
+}
+header > .header > h1 >a {
     color: white;
 }
 
-.App-intro {
-    font-size: large;
+.grayback {
+    background-color: rgba(39,39,40,.9);
 }
 
-@keyframes App-logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+/*--- TABLE---*/
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
+table thead {
+    display: table-header-group;
+}
+table thead th {
+    background-color: #0e394c;
+    border: 1px solid #167092;
+    color: #fefefe;
+    font-weight: 700;
+    padding: 2px 5px;
+}
+table tbody tr td, table tfoot tr td {
+    border: 1px solid #167092;
+    background-color: rgba(39,39,40,.9);
+    color: #e4d6ba;
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+table tbody tr td ul.marked_list ul {
+    margin-bottom: 3px;
+    padding: 0;
+}
+table tbody tr td ul.marked_list li {
+    background: rgba(22,112,146,.2);
+    color: #e4d6ba;
+    list-style: none;
+    margin-bottom: 1px;
+    padding: 3px;
+}
+/*--- TABLE---*/

@@ -1,10 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Index from './app/Index';
-import '../node_modules/bulma/css/bulma.css'
-import './static/styles/main.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import {browserHistory, Router} from 'react-router';
+import routes from "./routes";
+import "./static/styles/simple-grid.css";
+import "./static/styles/main.css";
 
-ReactDOM.render(
-	<Index />,
-	document.getElementById('root')
-);
+ReactDOM.render(<Router history={browserHistory} routes={routes}/>, document.getElementById("root"));
