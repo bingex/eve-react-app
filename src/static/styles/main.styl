@@ -1,0 +1,112 @@
+// Css Precompiler
+@import "./../../../node_modules/normalize.css/normalize.css"
+// Variables
+main-padding = 2px
+color-blue = #0d3647
+color-blue-hover = #0F4E61
+color = #B9964D
+// CSS
+body {
+	background url("../img/bg.jpg") repeat;
+
+	#root {
+		max-width 1280px
+		margin 0 auto
+		padding 0
+
+		#header-menu {
+			ul {
+				li {
+					font-size 1.1em
+					font-weight 600
+					color color
+					list-style none
+					position relative
+					display inline-block
+					padding main-padding main-padding+ 3
+					background-color color-blue
+					margin-right main-padding
+					&:hover {
+						background color-blue-hover
+						cursor pointer
+					}
+				}
+			}
+		}
+
+		.panel-content {
+			color #e4d6ba;
+			background-color rgba(39, 39, 40, .9);
+			padding 8px;
+		}
+		header {
+			background-color rgba(39, 39, 40, .9);
+
+			#head {
+				padding 5px 5px 5px 15px
+				a {
+					font-size 2em
+					color white
+					font-weight 700
+					text-decoration none
+					&:hover {
+						color rgba(255, 255, 255, 0.85)
+					}
+				}
+			}
+		}
+	// Tables
+		table {
+			width 100%
+			thead > tr > th {
+				background-color: #0e394c;
+				border: 1px solid #167092;
+				color: white;
+				font-weight: 700;
+				padding: 2px 5px;
+			}
+			tbody tr td, tfoot tr td {
+				border 1px solid #167092
+				background-color rgba(39, 39, 40, .9);
+				color #e4d6ba
+				padding main-padding
+				ul li {
+					padding 3px
+					background-color rgba(22, 112, 146, 0.2)
+					margin-bottom 1px
+					&:last-child {
+						margin-bottom 0
+					}
+					&:hover {
+						cursor pointer
+						background-color rgba(22, 112, 146, .4)
+					}
+				}
+			}
+		}
+
+	}
+}
+
+//  Global styles
+.t-a_l {
+	text-align left
+}
+.p-b-3 {
+	padding-bottom main-padding
+}
+
+.m-b-3 {
+	margin-bottom main-padding
+}
+
+.col-first
+	padding-right 1px
+
+.col-midd
+	padding-left 2px
+	padding-right 1px
+
+.col-last
+	padding-left 2px
+

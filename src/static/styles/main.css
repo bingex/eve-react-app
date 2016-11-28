@@ -1,55 +1,95 @@
-body{
-    /*background: url("../img/bg.jpg");*/
+@import "./../../../node_modules/normalize.css/normalize.css";
+body {
+  background: url("../img/bg.jpg") repeat;
 }
-#root {
-    max-width: 1280px;
-    margin: 0 auto;
+body #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
 }
-.container {
-    padding: 0;
-    margin: 2px;
-    width: 100%;
+body #root #header-menu ul li {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #b9964d;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: #0d3647;
+  margin-right: 2px;
 }
-header > .header > h1 >a {
-    color: white;
+body #root #header-menu ul li:hover {
+  background: #0f4e61;
+  cursor: pointer;
 }
-
-.grayback {
-    background-color: rgba(39,39,40,.9);
+body #root .panel-content {
+  color: #e4d6ba;
+  background-color: rgba(39,39,40,0.9);
+  padding: 8px;
 }
-
-/*--- TABLE---*/
-table {
-    width: 100%;
-    border-collapse: collapse;
+body #root header {
+  background-color: rgba(39,39,40,0.9);
 }
-table thead {
-    display: table-header-group;
+body #root header #head {
+  padding: 5px 5px 5px 15px;
 }
-table thead th {
-    background-color: #0e394c;
-    border: 1px solid #167092;
-    color: #fefefe;
-    font-weight: 700;
-    padding: 2px 5px;
+body #root header #head a {
+  font-size: 2em;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
 }
-table tbody tr td, table tfoot tr td {
-    border: 1px solid #167092;
-    background-color: rgba(39,39,40,.9);
-    color: #e4d6ba;
-    padding-top: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
+body #root header #head a:hover {
+  color: rgba(255,255,255,0.85);
 }
-table tbody tr td ul.marked_list ul {
-    margin-bottom: 3px;
-    padding: 0;
+body #root table {
+  width: 100%;
 }
-table tbody tr td ul.marked_list li {
-    background: rgba(22,112,146,.2);
-    color: #e4d6ba;
-    list-style: none;
-    margin-bottom: 1px;
-    padding: 3px;
+body #root table thead > tr > th {
+  background-color: #0e394c;
+  border: 1px solid #167092;
+  color: #fff;
+  font-weight: 700;
+  padding: 2px 5px;
 }
-/*--- TABLE---*/
+body #root table tbody tr td,
+body #root table tfoot tr td {
+  border: 1px solid #167092;
+  background-color: rgba(39,39,40,0.9);
+  color: #e4d6ba;
+  padding: 2px;
+}
+body #root table tbody tr td ul li,
+body #root table tfoot tr td ul li {
+  padding: 3px;
+  background-color: rgba(22,112,146,0.2);
+  margin-bottom: 1px;
+}
+body #root table tbody tr td ul li:last-child,
+body #root table tfoot tr td ul li:last-child {
+  margin-bottom: 0;
+}
+body #root table tbody tr td ul li:hover,
+body #root table tfoot tr td ul li:hover {
+  cursor: pointer;
+  background-color: rgba(22,112,146,0.4);
+}
+.t-a_l {
+  text-align: left;
+}
+.p-b-3 {
+  padding-bottom: 2px;
+}
+.m-b-3 {
+  margin-bottom: 2px;
+}
+.col-first {
+  padding-right: 1px;
+}
+.col-midd {
+  padding-left: 2px;
+  padding-right: 1px;
+}
+.col-last {
+  padding-left: 2px;
+}
