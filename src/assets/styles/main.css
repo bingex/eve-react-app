@@ -72,12 +72,22 @@ body #root table tfoot tr td ul > li:hover {
   background: #0f4e61;
   cursor: pointer;
 }
+#header-menu ul li a {
+  color: #b9964d;
+  text-decoration: none;
+}
+#header-menu ul li a:hover {
+  color: #b9964d;
+}
 #header-menu ul li.red-cell {
   background-color: rgba(187,70,48,0.9);
   color: #f5f5f5;
 }
 #header-menu ul li.red-cell:hover {
   background-color: #bb4630;
+}
+#header-menu ul li.red-cell a {
+  color: #fff;
 }
 nav#header-menu > ul > li:hover > ul {
   display: block;
