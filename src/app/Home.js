@@ -1,102 +1,97 @@
 import React, {Component} from 'react';
-// import Header from "./_blocks/Header";
+import Copyright from "./_blocks/_copyright";
+import Header from "./_blocks/Header";
+import PanelContent from "./_blocks/_panel_content";
 
-// import LiTable from "./_blocks/oneColumnTable";
+export default class Home extends Component {
 
-class Home extends Component {
+  render() {
+    return (
+      <div>
+        <Header />
 
-	render() {
-		return (
-			<div>
-				<header className="m-b-3">
-					<div id="head">
-						<a href="/">EVE-Prod.</a>
-					</div>
-				</header>
-				<nav className="blueback m-b-3" id="header-menu">
-					<ul>
-						<li>Calculators</li>
-						<li>Market</li>
-						<li>Item</li>
-					</ul>
-				</nav>
+        <div className="row">
+          <div className="col-md-4 col-first">
+            <table>
+              <thead>
+              <tr>
+                <th className="t-a_l">Market</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Prices</li>
+                    <li>Online orders</li>
+                  </ul>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="col-md-4 col-midd">
+            <table>
+              <thead>
+              <tr>
+                <th className="t-a_l">Market</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Prices</li>
+                    <li>Online orders</li>
+                  </ul>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
 
-				<div className="row">
-					<div className="col-md-4 col-first">
-						<table>
-							<thead>
-							<tr>
-								<th className="t-a_l">Market</th>
-							</tr>
-							</thead>
-							<tbody>
-							<tr>
-								<td>
-									<ul>
-										<li>Prices</li>
-										<li>Online orders</li>
-									</ul>
-								</td>
-							</tr>
-							</tbody>
-						</table>
-					</div>
-					<div className="col-md-4 col-midd">
-						<table>
-							<thead>
-							<tr>
-								<th className="t-a_l">Market</th>
-							</tr>
-							</thead>
-							<tbody>
-							<tr>
-								<td>
-									<ul>
-										<li>Prices</li>
-										<li>Online orders</li>
-									</ul>
-								</td>
-							</tr>
-							</tbody>
-						</table>
-					</div>
-					<div className="col-md-4 col-last">
-						<table>
-							<thead>
-							<tr>
-								<th className="t-a_l">Market</th>
-							</tr>
-							</thead>
-							<tbody>
-							<tr>
-								<td>
-									<ul>
-										<li>Prices</li>
-										<li>Online orders</li>
-										<li>Online check availabilyty</li>
-									</ul>
-								</td>
-							</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+          <div className="col-md-4 col-last">
+            <table>
+              <thead>
+              <tr>
+                <th className="t-a_l">Market</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Prices</li>
+                    <li>Online orders</li>
+                    <li>Online check availabilyty</li>
+                  </ul>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-				<div className="row">
-					<div className="col-md-12">
-						<div className="panel-content">Market Monitoring</div>
-					</div>
-				</div>
+        <PanelContent />
 
-				<div className="row">
-					<div className="col-md-12">
-						dsdsd
-					</div>
-				</div>
-
-			</div>
-		);
-	}
+        <div className="row">
+          <div className="col-md-12">
+            <table>
+              <thead>
+              <tr>
+                <th className="t-a_l">Market</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td className="padd-3"></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <Copyright />
+      </div>
+    );
+  }
 }
-
-export default Home;

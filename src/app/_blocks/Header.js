@@ -5,13 +5,35 @@ export default class Header extends Component {
 
 	render() {
 		return (
-			<header>
-				<div className="grayback header">
-					<h1>
-						<Link to="/item">EVE-Prod.</Link>
-					</h1>
+			<div>
+				<div className="row">
+					<div className="col-md-12">
+						<header>
+							<div id="head">
+								<Link to="/">EVE-Prod.</Link>
+							</div>
+						</header>
+					</div>
 				</div>
-			</header>
+				<div className="row">
+					<div className="col-md-12">
+						<nav id="header-menu">
+							<ul>
+								<li>
+									Calculators
+									<ul>
+										<li>BPC calculator</li>
+										<li>Cargo, fitting</li>
+									</ul>
+								</li>
+								<li>Market</li>
+								<li>Item</li>
+								<li className="red-cell">Donate</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
 		);
 	}
 }

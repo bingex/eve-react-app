@@ -1,112 +1,166 @@
 // Css Precompiler
-@import "./../../../node_modules/normalize.css/normalize.css"
+@import "mixins.styl"
 // Variables
 main-padding = 2px
+panel-padding = 8px
 color-blue = #0d3647
 color-blue-hover = #0F4E61
 color = #B9964D
+color-dark = #e4d6ba
+color-white = whitesmoke
 // CSS
 body {
-	background url("../img/bg.jpg") repeat;
+  background url("../img/bg.jpg") repeat;
 
-	#root {
-		max-width 1280px
-		margin 0 auto
-		padding 0
+  #root {
+    max-width 1280px
+    margin 0 auto
 
-		#header-menu {
-			ul {
-				li {
-					font-size 1.1em
-					font-weight 600
-					color color
-					list-style none
-					position relative
-					display inline-block
-					padding main-padding main-padding+ 3
-					background-color color-blue
-					margin-right main-padding
-					&:hover {
-						background color-blue-hover
-						cursor pointer
-					}
-				}
-			}
-		}
+    .panel-content {
+      color color-dark;
+      background-color rgba(39, 39, 40, .9);
+      padding panel-padding
+    }
 
-		.panel-content {
-			color #e4d6ba;
-			background-color rgba(39, 39, 40, .9);
-			padding 8px;
-		}
-		header {
-			background-color rgba(39, 39, 40, .9);
+    .grayback {
+      background-color rgba(39, 39, 40, .9)
+      padding panel-padding
+    }
 
-			#head {
-				padding 5px 5px 5px 15px
-				a {
-					font-size 2em
-					color white
-					font-weight 700
-					text-decoration none
-					&:hover {
-						color rgba(255, 255, 255, 0.85)
-					}
-				}
-			}
-		}
-	// Tables
-		table {
-			width 100%
-			thead > tr > th {
-				background-color: #0e394c;
-				border: 1px solid #167092;
-				color: white;
-				font-weight: 700;
-				padding: 2px 5px;
-			}
-			tbody tr td, tfoot tr td {
-				border 1px solid #167092
-				background-color rgba(39, 39, 40, .9);
-				color #e4d6ba
-				padding main-padding
-				ul li {
-					padding 3px
-					background-color rgba(22, 112, 146, 0.2)
-					margin-bottom 1px
-					&:last-child {
-						margin-bottom 0
-					}
-					&:hover {
-						cursor pointer
-						background-color rgba(22, 112, 146, .4)
-					}
-				}
-			}
-		}
+    header {
+      background-color rgba(39, 39, 40, .9);
 
-	}
+      #head {
+        padding 5px 5px 5px 15px
+        a {
+          font-size 2em
+          color white
+          font-weight 700
+          text-decoration none
+          &:hover {
+            color rgba(255, 255, 255, .85)
+          }
+        }
+      }
+    }
+  // Tables
+    table {
+      width 100%
+      border-collapse initial
+      thead > tr > th {
+        background-color #0e394c
+        color color-white;
+        padding: 1px 6px
+      }
+      tbody tr td, tfoot tr td {
+        background-color rgba(39, 39, 40, 1);
+        color color-dark
+        ul > li {
+          padding 1px 6px
+          background-color rgba(22, 112, 146, 0.2)
+          margin-top 1px
+          &:last-child {
+            margin-bottom 0
+          }
+          &:hover {
+            cursor pointer
+            background-color rgba(22, 112, 146, .4)
+          }
+        }
+      }
+    }
+
+  }
 }
+
+// Header Menu
+#header-menu {
+  ul {
+    li {
+      font-weight 600
+      color color
+      list-style none
+      position relative
+      display inline-block
+      padding main-padding main-padding+ 3
+      background-color color-blue
+      margin-right main-padding
+      &:hover {
+        background color-blue-hover
+        cursor pointer
+      }
+      &.red-cell {
+        background-color rgba(187, 70, 48, 0.9)
+        color color-white
+        &:hover {
+          background-color rgba(187, 70, 48, 1)
+        }
+      }
+    }
+  }
+}
+
+nav#header-menu > ul > li:hover > ul {
+  display block
+}
+
+nav#header-menu > ul > li > ul {
+  position absolute
+  z-index 1
+  left 0
+  top 100%
+  display none
+  li {
+    min-width 130px
+    border-top: 1px solid rgba(39, 39, 40, .9)
+  }
+}
+
+//  Header Menu
+
+.t-small
+  fontSize(0.85em)
+  fontColor (color-white)
 
 //  Global styles
-.t-a_l {
-	text-align left
-}
-.p-b-3 {
-	padding-bottom main-padding
-}
+.t-a_l
+  text-align left
 
-.m-b-3 {
-	margin-bottom main-padding
-}
+.p-b-3
+  padding-bottom main-padding
+
+.m-b-3
+  margin-bottom main-padding
 
 .col-first
-	padding-right 1px
+  padding-right 1px
 
 .col-midd
-	padding-left 2px
-	padding-right 1px
+  padding-left 2px
+  padding-right 1px
 
 .col-last
-	padding-left 2px
+  padding-left 2px
+
+.padd-3
+  padding 3px
+
+@media (max-width: 1024px)
+  .row
+    margin 0 0 main-padding
+
+  div[class^=col-md]
+    padding 0 2px
+
+@media (max-width: 768px)
+  .row
+    margin 0 0 main-padding
+
+  .col-midd, .col-last
+    margin-top main-padding
+
+@media (max-width: 375px)
+  body
+    fontSize(1.3em)
+
 

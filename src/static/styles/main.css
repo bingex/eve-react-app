@@ -1,29 +1,16 @@
-@import "./../../../node_modules/normalize.css/normalize.css";
 body {
   background: url("../img/bg.jpg") repeat;
 }
 body #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0;
-}
-body #root #header-menu ul li {
-  font-size: 1.1em;
-  font-weight: 600;
-  color: #b9964d;
-  list-style: none;
-  position: relative;
-  display: inline-block;
-  padding: 2px 5px;
-  background-color: #0d3647;
-  margin-right: 2px;
-}
-body #root #header-menu ul li:hover {
-  background: #0f4e61;
-  cursor: pointer;
 }
 body #root .panel-content {
   color: #e4d6ba;
+  background-color: rgba(39,39,40,0.9);
+  padding: 8px;
+}
+body #root .grayback {
   background-color: rgba(39,39,40,0.9);
   padding: 8px;
 }
@@ -44,35 +31,71 @@ body #root header #head a:hover {
 }
 body #root table {
   width: 100%;
+  border-collapse: initial;
 }
 body #root table thead > tr > th {
   background-color: #0e394c;
-  border: 1px solid #167092;
-  color: #fff;
-  font-weight: 700;
-  padding: 2px 5px;
+  color: #f5f5f5;
+  padding: 1px 6px;
 }
 body #root table tbody tr td,
 body #root table tfoot tr td {
-  border: 1px solid #167092;
-  background-color: rgba(39,39,40,0.9);
+  background-color: #272728;
   color: #e4d6ba;
-  padding: 2px;
 }
-body #root table tbody tr td ul li,
-body #root table tfoot tr td ul li {
-  padding: 3px;
+body #root table tbody tr td ul > li,
+body #root table tfoot tr td ul > li {
+  padding: 1px 6px;
   background-color: rgba(22,112,146,0.2);
-  margin-bottom: 1px;
+  margin-top: 1px;
 }
-body #root table tbody tr td ul li:last-child,
-body #root table tfoot tr td ul li:last-child {
+body #root table tbody tr td ul > li:last-child,
+body #root table tfoot tr td ul > li:last-child {
   margin-bottom: 0;
 }
-body #root table tbody tr td ul li:hover,
-body #root table tfoot tr td ul li:hover {
+body #root table tbody tr td ul > li:hover,
+body #root table tfoot tr td ul > li:hover {
   cursor: pointer;
   background-color: rgba(22,112,146,0.4);
+}
+#header-menu ul li {
+  font-weight: 600;
+  color: #b9964d;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: #0d3647;
+  margin-right: 2px;
+}
+#header-menu ul li:hover {
+  background: #0f4e61;
+  cursor: pointer;
+}
+#header-menu ul li.red-cell {
+  background-color: rgba(187,70,48,0.9);
+  color: #f5f5f5;
+}
+#header-menu ul li.red-cell:hover {
+  background-color: #bb4630;
+}
+nav#header-menu > ul > li:hover > ul {
+  display: block;
+}
+nav#header-menu > ul > li > ul {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 100%;
+  display: none;
+}
+nav#header-menu > ul > li > ul li {
+  min-width: 130px;
+  border-top: 1px solid rgba(39,39,40,0.9);
+}
+.t-small {
+  font-size: 0.85em;
+  color: #f5f5f5;
 }
 .t-a_l {
   text-align: left;
@@ -92,4 +115,29 @@ body #root table tfoot tr td ul li:hover {
 }
 .col-last {
   padding-left: 2px;
+}
+.padd-3 {
+  padding: 3px;
+}
+@media (max-width: 1024px) {
+  .row {
+    margin: 0 0 2px;
+  }
+  div[class^=col-md] {
+    padding: 0 2px;
+  }
+}
+@media (max-width: 768px) {
+  .row {
+    margin: 0 0 2px;
+  }
+  .col-midd,
+  .col-last {
+    margin-top: 2px;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    font-size: 1.3em;
+  }
 }
