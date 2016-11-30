@@ -1,9 +1,14 @@
 import React from 'react';
+import Header from "./_blocks/Header";
 
 class App extends React.Component {
 
   render() {
-    return this.props.children;
+    return (
+      <div>
+        <Header />
+        {this.props.children}
+      </div>);
   }
 }
 

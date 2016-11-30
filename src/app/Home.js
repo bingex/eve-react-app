@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Copyright from "./_blocks/_copyright";
-import Header from "./_blocks/Header";
 import PanelContent from "./_blocks/_panel_content";
 import IndexTables from "./_blocks/_index_tables";
 
@@ -9,8 +8,6 @@ class Home extends Component {
 	render() {
 		return (
 			<div>
-				<Header />
-
 				<IndexTables />
 				<PanelContent />
 

@@ -58,15 +58,29 @@ body #root table tfoot tr td ul > li:hover {
   cursor: pointer;
   background-color: rgba(22,112,146,0.4);
 }
+.inline {
+  display: inline-block;
+}
+.user_img {
+  cursor: pointer;
+  margin: 3px 0 0 3px;
+  border: 1px solid #0d3647;
+}
+.user_img:hover {
+  border-color: #0f4e61;
+}
+.td-padd-rb {
+  padding: 0 3px 3px 0;
+}
 #header-menu ul li {
   font-weight: 600;
   color: #b9964d;
   list-style: none;
   position: relative;
   display: inline-block;
-  padding: 2px 5px;
+  padding: 3px 6px;
   background-color: #0d3647;
-  margin-right: 2px;
+  margin-right: 3px;
 }
 #header-menu ul li:hover {
   background: #0f4e61;
@@ -111,10 +125,10 @@ nav#header-menu > ul > li > ul li {
   text-align: left;
 }
 .p-b-3 {
-  padding-bottom: 2px;
+  padding-bottom: 3px;
 }
 .m-b-3 {
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 .col-first {
   padding-right: 1px;
@@ -131,7 +145,7 @@ nav#header-menu > ul > li > ul li {
 }
 @media (max-width: 1024px) {
   .row {
-    margin: 0 0 2px;
+    margin: 0 0 3px;
   }
   div[class^=col-md] {
     padding: 0 2px;
@@ -139,11 +153,11 @@ nav#header-menu > ul > li > ul li {
 }
 @media (max-width: 768px) {
   .row {
-    margin: 0 0 2px;
+    margin: 0 0 3px;
   }
   .col-midd,
   .col-last {
-    margin-top: 2px;
+    margin-top: 3px;
   }
 }
 @media (max-width: 375px) {

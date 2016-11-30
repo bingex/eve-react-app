@@ -1,13 +1,14 @@
 // Css Precompiler
 @import "mixins.styl"
 // Variables
-main-padding = 2px
+main-padding = 3px
 panel-padding = 8px
 color-blue = #0d3647
 color-blue-hover = #0F4E61
 color = #B9964D
 color-dark = #e4d6ba
 color-white = whitesmoke
+
 // CSS
 body {
   background url("../img/bg.jpg") repeat;
@@ -69,8 +70,23 @@ body {
         }
       }
     }
-
   }
+}
+
+.inline {
+  display inline-block
+}
+.user_img {
+  cursor pointer
+  margin main-padding 0 0 main-padding
+  border: 1px solid color-blue
+  &:hover {
+    border-color color-blue-hover
+  }
+}
+
+.td-padd-rb {
+  padding 0 main-padding main-padding 0
 }
 
 // Header Menu
