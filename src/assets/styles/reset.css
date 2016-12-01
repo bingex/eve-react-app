@@ -1,18 +1,22 @@
 ul {
-  padding: 0;
-  margin: 0 !important;
+    padding: 0;
+    margin: 0 !important;
 }
+
 ul li {
-  list-style: none;
+    list-style: none;
 }
+
 div,
 table {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 table {
-  width: 100%;
+    width: 100%;
 }
+
 .row {
-  margin-bottom: 3px;
+    margin-bottom: 3px;
 }

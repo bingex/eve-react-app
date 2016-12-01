@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import OneColumnTable from "./_blocks/components/oneColumnTable";
-import UsersList from "./_blocks/components/UsersList";
-import api_url from "./cfg/api";
+import React, {Component} from "react";
+import OneColumnTable from "../components/oneColumnTable";
+import UsersList from "../components/UsersList";
+import api_url from "../api";
 import _ from "lodash";
 // axios
 import axios from "axios";
@@ -29,36 +29,36 @@ class Donate extends Component {
 
   componentDidMount() {
     axios.get(api_url.donate)
-    .then(response => {
+      .then(response => {
 
-      let authors = [];
+        let authors = [];
 
-      _.forEach(response.data.authors, function (val, index) {
-        authors.push({
-          char_id  : index,
-          char_name: val.name
+        _.forEach(response.data.authors, function (val, index) {
+          authors.push({
+            char_id  : index,
+            char_name: val.name
+          });
         });
+
+        let prevState = this.state;
+
+        prevState.contribute.list = response.data.left.map(function (val, index) {
+          return <UsersList key={index} char={val}/>
+        });
+
+        prevState.donators.list = response.data.right.map(function (val, index) {
+          return <UsersList key={index} char={val}/>
+        });
+
+        prevState.authors.list = authors.map(function (val, index) {
+          return <UsersList key={index} char={val}/>
+        });
+
+        this.setState({prevState});
+      })
+      .catch(error => {
+        console.log(error);
       });
-
-      let prevState = this.state;
-
-      prevState.contribute.list = response.data.left.map(function (val, index) {
-        return <UsersList key={index} char={val}/>
-      });
-
-      prevState.donators.list = response.data.right.map(function (val, index) {
-        return <UsersList key={index} char={val}/>
-      });
-
-      prevState.authors.list = authors.map(function (val, index) {
-        return <UsersList key={index} char={val}/>
-      });
-
-      this.setState({prevState});
-    })
-    .catch(error => {
-      console.log(error);
-    });
   }
 
   render() {
