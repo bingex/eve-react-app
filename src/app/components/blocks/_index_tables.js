@@ -1,70 +1,26 @@
 import React, {Component} from "react";
+import OneColumnTable from "./../oneColumnTable";
+import SimpleList from "./../SimpleList";
 
 export default class index_tables extends Component {
 
   render() {
+    let market = <SimpleList list={this.props.listTables[0].list}/>
+    let productions = <SimpleList list={this.props.listTables[1].list}/>
+    let more = <SimpleList list={this.props.listTables[2].list}/>
+
     return (
       <div className="row">
         <div className="col-md-4 col-first">
-          <table>
-            <thead>
-            <tr>
-              <th className="t-a_l">Market</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>
-                <ul>
-                  <li>Prices</li>
-                  <li>Online orders</li>
-                </ul>
-              </td>
-            </tr>
-            </tbody>
-          </table>
+          <OneColumnTable title={this.props.listTables[0].title} _class="t-a_l" list={market}/>
         </div>
         <div className="col-md-4 col-midd">
-          <table>
-            <thead>
-            <tr>
-              <th className="t-a_l">Market</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>
-                <ul>
-                  <li>Prices</li>
-                  <li>Online orders</li>
-                </ul>
-              </td>
-            </tr>
-            </tbody>
-          </table>
+          <OneColumnTable title={this.props.listTables[1].title} _class="t-a_l" list={productions}/>
         </div>
-
         <div className="col-md-4 col-last">
-          <table>
-            <thead>
-            <tr>
-              <th className="t-a_l">Market</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>
-                <ul>
-                  <li>Prices</li>
-                  <li>Online orders</li>
-                  <li>Online check availabilyty</li>
-                </ul>
-              </td>
-            </tr>
-            </tbody>
-          </table>
+          <OneColumnTable title={this.props.listTables[2].title} _class="t-a_l" list={more}/>
         </div>
       </div>
-    );
+    )
   }
 }
