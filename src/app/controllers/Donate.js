@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import OneColumnTable from "../components/oneColumnTable";
 import UsersList from "../components/UsersList";
 import api_url from "../api";
-import _ from "lodash";
+import forEach from "lodash";
 // axios
 import axios from "axios";
 
@@ -33,7 +33,7 @@ class Donate extends Component {
 
         let authors = [];
 
-        _.forEach(response.data.authors, function (val, index) {
+        forEach(response.data.authors, function (val, index) {
           authors.push({
             char_id  : index,
             char_name: val.name
